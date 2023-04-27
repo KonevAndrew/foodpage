@@ -1,0 +1,14 @@
+.btn__top {
+    position: fixed;
+    right: 2%;
+    bottom: 60px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s,
+    visibility 0.5s;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
