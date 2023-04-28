@@ -7,12 +7,12 @@
   <meta name="robots" content="index">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Healthy food</title>
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
 
-  <!-- <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="img/favicon.png" type="image/png"> -->
 
 </head>
 <body>
+  
   <header class="header">
     <div class="header__left-block">
       <div class="header__logo">
@@ -112,7 +112,7 @@
       </nav>
     </div>
     <div class="header__right-block">
-      <button class="btn btn_white">Связаться с нами</button>
+      <button class="btn btn_white modal-trigger">Связаться с нами</button>
     </div>
     <div class="burger__wrapper">
       <div class="burger">
@@ -124,21 +124,10 @@
       <div class="burger__menu">
         <a href="#" class="header__link">Доставка питания</a>
         <a href="#" class="header__link">Второй пункт</a>
-        <button class="btn btn_white">Связаться с нами</button>
+        <button class="btn btn_white modal-trigger">Связаться с нами</button>
       </div>
     </div>
   </header>
-  <!-- <div class="sidepanel">
-    <div class="sidepanel__text"><span>Социальные сети</span></div>
-    <div class="sidepanel__divider"></div>
-    <a href="#" class="sidepanel__icon">
-      <img src="icons/instagram.svg" alt="instagram" />
-    </a>
-    <a href="#" class="sidepanel__icon">
-      <img src="icons/facebook.svg" alt="facebook" />
-    </a>
-  </div> -->
-
   <div class="preview">
     <div class="bgc_blue"></div>
     <div class="container">
@@ -207,7 +196,7 @@
         </div>
       </div>
       <div class="offer__action">
-        <button class="btn btn_dark">Связаться с нами</button>
+        <button class="btn btn_dark modal-trigger">Связаться с нами</button>
       </div>
     </div>
     <div class="container">
@@ -231,104 +220,83 @@
       </div>
       <div class="offer__slider">
         <div class="offer__slider-counter">
-          <div class="offer__slider-prev">
-            <img src="icons/left.svg" alt="prev" />
-          </div>
-          <span id="current">03</span>
-          /
-          <span id="total">04</span>
-          <div class="offer__slider-next">
-            <img src="icons/right.svg" alt="next" />
-          </div>
+            <div class="offer__slider-prev">
+                <img src="icons/left.svg" alt="prev">
+            </div>
+            <span id="current">03</span>
+            /
+            <span id="total">04</span>
+            <div class="offer__slider-next">
+                <img src="icons/right.svg" alt="next">
+            </div>
         </div>
         <div class="offer__slider-wrapper">
-          <div class="offer__slide">
-            <img src="img/slider/pepper.jpg" alt="pepper" />
-          </div>
-          <!-- <div class="offer__slide">
-                      <img src="img/slider/food-12.jpg" alt="food">
-                  </div>
-                  <div class="offer__slide">
-                      <img src="img/slider/olive-oil.jpg" alt="oil">
-                  </div>
-                  <div class="offer__slide">
-                      <img src="img/slider/paprika.jpg" alt="paprika">
-                  </div> -->
+            <div class="offer__slider-inner">
+                <div class="offer__slide">
+                    <img src="img/slider/pepper.jpg" alt="pepper">
+                </div>
+                <div class="offer__slide">
+                    <img src="img/slider/food-12.jpg" alt="food">
+                </div>
+                <div class="offer__slide">
+                    <img src="img/slider/olive-oil.jpg" alt="oil">
+                </div>
+                <div class="offer__slide">
+                    <img src="img/slider/paprika.jpg" alt="paprika">
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
     </div>
   </div>
 
   <div class="divider"></div>
 
-  <div class="calculating">
-    <div class="container">
-      <h2 class="title">Рассчитаем вашу потребность в калориях?</h2>
-      <div class="calculating__field">
-        <div class="calculating__subtitle">Ваш пол</div>
-        <div class="calculating__choose" id="gender">
-          <div
-            class="calculating__choose-item calculating__choose-item_active"
-          >
-            Женщина
-          </div>
-          <div class="calculating__choose-item">Мужчина</div>
-        </div>
+      <div class="calculating">
+        <div class="container">
+            <h2 class="title">Рассчитаем вашу потребность в калориях?
+            </h2>
+            <div class="calculating__field">
+                <div class="calculating__subtitle">
+                    Ваш пол
+                </div>
+                <div class="calculating__choose" id="gender">
+                    <div id="female" class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+                    <div id="male" class="calculating__choose-item">Мужчина</div>
+                </div>
 
-        <div class="calculating__subtitle">Ваша конституция</div>
-        <div class="calculating__choose calculating__choose_medium">
-          <input
-            type="text"
-            id="height"
-            placeholder="Введите рост"
-            class="calculating__choose-item"
-          />
-          <input
-            type="text"
-            id="weight"
-            placeholder="Введите вес"
-            class="calculating__choose-item"
-          />
-          <input
-            type="text"
-            id="age"
-            placeholder="Введите возраст"
-            class="calculating__choose-item"
-          />
-        </div>
+                <div class="calculating__subtitle">
+                    Ваша конституция
+                </div>
+                <div class="calculating__choose calculating__choose_medium">
+                    <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item">
+                    <input type="text" id="weight" placeholder="Введите вес"  class="calculating__choose-item">
+                    <input type="text" id="age" placeholder="Введите возраст" class="calculating__choose-item">
+                </div>
 
-        <div class="calculating__subtitle">
-          Выберите вашу физическая активность
-        </div>
-        <div class="calculating__choose calculating__choose_big">
-          <div id="low" class="calculating__choose-item">
-            Низкая активность
-          </div>
-          <div
-            id="small"
-            class="calculating__choose-item calculating__choose-item_active"
-          >
-            Невысокая активность
-          </div>
-          <div id="medium" class="calculating__choose-item">
-            Умеренная активность
-          </div>
-          <div id="high" class="calculating__choose-item">
-            Высокая активность
-          </div>
-        </div>
+                <div class="calculating__subtitle">
+                    Выберите вашу физическая активность
+                </div>
+                <div class="calculating__choose calculating__choose_big">
+                    <div data-ratio="1.2" id="low" class="calculating__choose-item">Низкая активность </div>
+                    <div data-ratio="1.375" id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
+                    <div data-ratio="1.55" id="medium" class="calculating__choose-item">Умеренная активность</div>
+                    <div data-ratio="1.725" id="high" class="calculating__choose-item">Высокая активность</div>
+                </div>
 
-        <div class="calculating__divider"></div>
+                <div class="calculating__divider"></div>
 
-        <div class="calculating__total">
-          <div class="calculating__subtitle">
-            Ваша суточная норма калорий:
-          </div>
-          <div class="calculating__result"><span>2700</span> ккал</div>
+                <div class="calculating__total">
+                    <div class="calculating__subtitle">
+                        Ваша суточная норма калорий:
+                    </div>
+                    <div class="calculating__result">
+                        <span>2700</span> ккал
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
   <div class="divider"></div>
 
@@ -473,7 +441,7 @@
     </div>
   </footer>
 
-  <div class="modal">
+  <div class="modal hide">
     <div class="modal__dialog">
       <div class="modal__content">
         <form action="#">
@@ -505,6 +473,5 @@
     <img src="icons/rocket.png" width="60" alt="top" />
   </div>
 
-  <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
